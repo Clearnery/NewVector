@@ -51,7 +51,7 @@ public:
 	TMatrix<T> operator*(TMatrix& mx);
 	bool operator==(TMatrix& mx);
 	bool operator!=(TMatrix& mx);
-	TMatrix<T>& operator=(TMatrix& other);
+	TMatrix<T>& operator=(const TMatrix& other);
 	
 	/*T& operator[](size_t i)
 	{
@@ -391,7 +391,7 @@ inline bool TMatrix<T>::operator!=(TMatrix& mx)
 }
 
 template<typename T>
-inline TMatrix<T>& TMatrix<T>::operator=(TMatrix& other)
+inline TMatrix<T>& TMatrix<T>::operator=(const TMatrix& other)
 {
 	if (this != &other)
 	{
