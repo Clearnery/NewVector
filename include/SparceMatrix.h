@@ -49,8 +49,11 @@ public:
     void LoadFromFile(const std::string& filename);
 
   
-    friend std::ostream& operator<<(std::ostream& os, const SparceMatrix& mx);
-    friend std::istream& operator>>(std::istream& is, SparceMatrix& mx);
+template<typename U>
+friend std::ostream& operator<<(std::ostream& os, const SparceMatrix<U>& mx);
+
+template<typename U>
+friend std::istream& operator>>(std::istream& is, SparceMatrix<U>& mx);
  
 
     
