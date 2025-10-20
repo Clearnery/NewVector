@@ -113,8 +113,11 @@ public:
 	void LoadFromFile(const std::string& filename);
 
 
-	friend std::ostream& operator<<(std::ostream& os, const TMatrix<T>& vec);
-    friend std::istream& operator>>(std::istream& is, TMatrix<T>& vec);
+	template<typename U>
+    friend std::ostream& operator<<(std::ostream& os, const TMatrix<U>& mat);
+
+    template<typename U>
+    friend std::istream& operator>>(std::istream& is, TMatrix<U>& mat);
 
 	struct Coordinates
 	{
