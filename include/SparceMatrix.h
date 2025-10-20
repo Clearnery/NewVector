@@ -9,6 +9,7 @@
 #include <vector>    
 #include <algorithm>  
 #include <fstream>
+#include <iostream> 
 
 template <class T>
 class SparceMatrix
