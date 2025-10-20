@@ -213,7 +213,7 @@ inline TriangleMatrix<T> TriangleMatrix<T>::operator*(TriangleMatrix& mx)
 		for (size_t j = 0; j < i; j++) //столбцы
 		{
 			T value;
-			for (size_t k = 0; k < i; k++++)
+			for (size_t k = 0; k < i; k++)
 			{
 				value += Get(i, k) * Get(k, j);
 			}
