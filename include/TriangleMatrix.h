@@ -2,6 +2,8 @@
 #include<vector>
 #include<functional>
 #include<stdexcept>
+#include <cmath>
+#include <fstream>  
 
 class RowOffsets
 {
@@ -83,7 +85,7 @@ public:
 	private:
 		T* ptr;
 	public:
-		Iterator(T* p = nullprt);
+		Iterator(T* p = nullptr);
 		Iterator& operator++();
 		T& operator*() const;
 		T* operator->() const;
