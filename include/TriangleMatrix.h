@@ -71,7 +71,11 @@ public:
 
 	RowAccessor operator[](size_t row)
 	{
-		return RowAccessor(row, matrix + counter.GetOffset(row))
+	if (row >= size) 
+	{
+        throw std::out_of_range("Row index out of range");
+    }
+    return RowAccessor(row, matrix + counter.GetOffset(row));  
 	}
 
 	void SaveToFile(const std::string& filename) const;
