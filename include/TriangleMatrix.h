@@ -69,16 +69,16 @@ public:
 		}
 	};
 
-	T* operator[](size_t row)
+	RowAccessor operator[](size_t row)
 	{
-		return RowAccessor(cols, matrix + counter.GetOffset(row))
+		return RowAccessor(row, matrix + counter.GetOffset(row))
 	}
 
 	void SaveToFile(const std::string& filename) const;
 	void LoadFromFile(const std::string& filename);
 
-	friend std::ostream& operator<<(std::ostream& os, const TriangleMatrix& mx);
-	friend std::istream& operator>>(std::istream& is, TriangleMatrix& mx);
+	friend std::ostream& operator<<(std::ostream& os, const TriangleMatrix<T>& mx);
+	friend std::istream& operator>>(std::istream& is, TriangleMatrix<T>& mx);
 
 	class Iterator
 	{
