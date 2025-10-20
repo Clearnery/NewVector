@@ -81,8 +81,11 @@ public:
 	void SaveToFile(const std::string& filename) const;
 	void LoadFromFile(const std::string& filename);
 
-	friend std::ostream& operator<<(std::ostream& os, const TriangleMatrix<T>& mx);
-	friend std::istream& operator>>(std::istream& is, TriangleMatrix<T>& mx);
+	template<typename U>
+    friend std::ostream& operator<<(std::ostream& os, const TriangleMatrix<U>& mx);
+
+    template<typename U>
+    friend std::istream& operator>>(std::istream& is, TriangleMatrix<U>& mx);
 
 	class Iterator
 	{
