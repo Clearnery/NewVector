@@ -112,8 +112,9 @@ public:
 	void SaveToFile(const std::string& filename) const;
 	void LoadFromFile(const std::string& filename);
 
-	friend std::ostream& operator<<(std::ostream& os, const TMatrix& vec);
-	friend std::istream& operator>>(std::istream& is, TMatrix& vec);
+
+	friend std::ostream& operator<<(std::ostream& os, const TMatrix<T>& vec);
+    friend std::istream& operator>>(std::istream& is, TMatrix<T>& vec);
 
 	struct Coordinates
 	{
