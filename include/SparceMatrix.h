@@ -5,6 +5,9 @@
 #include <functional>
 #include <string>
 #include<stdexcept>
+#include <cmath>      // Добавить для log2, sqrt, pow, abs
+#include <vector>     // Добавить для std::vector
+#include <algorithm>  // Добавить для std::abs
 
 template <class T>
 class SparceMatrix
